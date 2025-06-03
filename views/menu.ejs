@@ -10,13 +10,11 @@
   <h1>Full Menu</h1>
 
   <% RESTAURANT.menu.forEach(m => { %>
-    <li> <% if (m.rating === 5) {%>
-              <p>⭐</p>
-          <% } %>
-        <p>Dish Name: <%= m.name %></p>
-        <p>Price: <%= m.price %></p>
-        <p>Rating: <%= m.rating %></p>
-        <p>Details: <%= m.details %></p>
+    <li>
+        <ul>Dish Name: <%= m.name %> <% if (m.rating === 5){ %> ⭐ <% } %></ul>
+        <ul>Price: <%= m.price %></ul>
+        <ul>Rating: <%= m.rating %></ul>
+        <ul>Details: <%= m.details %></ul>
     </li>
   <% }) %>
 </body>
