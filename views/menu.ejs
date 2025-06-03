@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu</title>
+</head>
+<body>
+    <%- include('./partials/nav') %>
+  <h1>Full Menu</h1>
+
+  <% RESTAURANT.menu.forEach(m => { %>
+    <li> <% if (m.rating === 5) {%>
+              <p>⭐</p>
+          <% } %>
+        <p>Dish Name: <%= m.name %></p>
+        <p>Price: <%= m.price %></p>
+        <p>Rating: <%= m.rating %></p>
+        <p>Details: <%= m.details %></p>
+    </li>
+  <% }) %>
+</body>
+</html>
